@@ -1,8 +1,11 @@
+import React, { useState } from 'react';
+import AddEntryForm from './Components/AddEntryForm/AddEntryForm';
 
 function App() {
+  const [entries, setEntries] = useState([{Name: 'Dudu',Post: 'where the party at'}])
   return (
     <div>
-      <h1>yea baby</h1>
+      <AddEntryForm parentEntries={entries}/>
     </div>
   );
 }
