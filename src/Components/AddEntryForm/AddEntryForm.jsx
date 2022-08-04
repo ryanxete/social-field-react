@@ -6,13 +6,11 @@ const AddEntryForm = (props) => {
             <form>
                 <label>
                     Name:
-                    <input type="text" name="Enter Your Name" />
-                </label><br />
+                    <input type="text" name="Name" value={'Name here..'}/>
+                </label><br /><br />
                 <label>
                     Post:
-                    <textarea rows={8}>
-                        <input type="text" name="Post" />
-                    </textarea>
+                    <textarea rows={8} type="text" name="Post" value={'Post here..'}/>
                 </label><br />
                 <input type="submit" value="Submit" />
             </form>
