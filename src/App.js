@@ -5,11 +5,17 @@ import DisplayEntries from './DisplayEntries/DisplayEntries';
 
 
 function App() {
-  const [entries, setEntries] = useState([{Name: 'Dudu',Post: 'where the party at'}])
+  const [entries, setEntries] = useState([{Name: 'Dudu',Post: 'where the party at'},{Name: 'Khodam', Post: 'are'}])
+
+  function AddNewEntry (entry) {
+    let tempEntry = [entry, ...entries]
+    setEntries(tempEntry)
+  }
+
   return (
     <div>
       <Navbar />
-      <AddEntryForm />
+      <AddEntryForm addNew={AddNewEntry}/>
       <DisplayEntries parentEntries={entries}/>
     </div>
   );

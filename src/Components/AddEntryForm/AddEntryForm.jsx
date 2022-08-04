@@ -1,19 +1,31 @@
 import React, { useState } from 'react';
 
 const AddEntryForm = (props) => {
-    // const []
+
+    const [name, setName] = useState('')
+    const [post, setPost] = useState('')
+
+    function handleSubmit(event){
+        event.preventDefault();
+        let newEntry = {
+            Name: name,
+            Post: post
+        }
+        props.addNew(newEntry)
+    }
+
     return (
         <div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>
                     Name:
-                    <input type="text" name="Name" value={'Name here..'}/>
+                    <input type="text" name="Name" value={name} onChange={(event) => setName(event.target.value)}/>
                 </label><br />
                 <label>
                     Post:
-                    <textarea rows={8} type="text" name="Post" value={'Post here..'}/>
+                    <textarea rows={8} type="text" name="Post" onChange={(event) => setPost(event.target.value)}/>
                 </label><br />
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Add" />
             </form>
         </div>
 
