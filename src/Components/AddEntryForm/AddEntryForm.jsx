@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
 const AddEntryForm = (props) => {
+    // const []
     return (
         <div>
             <form>
                 <label>
                     Name:
                     <input type="text" name="Name" value={'Name here..'}/>
-                </label><br /><br />
+                </label><br />
                 <label>
                     Post:
                     <textarea rows={8} type="text" name="Post" value={'Post here..'}/>
