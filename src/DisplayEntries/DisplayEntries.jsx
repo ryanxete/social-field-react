@@ -3,9 +3,9 @@ const DisplayEntries = (props) => {
     return (
         <div className='posts'>
             <div>
-                {props.parentEntries.map((entry)=>{
+                {props.parentEntries.map((entry, index)=>{
                 return (
-                    <div>
+                    <div key={index}>
                         <p>{entry.Name}</p>
                         <p>{entry.Post}</p>
                     </div>
