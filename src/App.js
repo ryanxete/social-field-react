@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AddEntryForm from './Components/AddEntryForm/AddEntryForm';
 import Navbar from './Components/Navbar/Navbar'
 import DisplayEntries from './DisplayEntries/DisplayEntries';
+import './App.css'
 
 
 function App() {
@@ -13,10 +14,14 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='container-fluid'>
+      <div className='navbar'>
       <Navbar />
+      </div>
+      <div className='feed'>
       <AddEntryForm addNew={AddNewEntry}/>
       <DisplayEntries parentEntries={entries}/>
+      </div>
     </div>
   );
 }

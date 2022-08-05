@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import './Navbar.css'
 
 const Navbar = (props) => {
     return (
-        <h2>SocialFeed</h2>
+      <nav class="navbar">
+        <h2 class="navbar-brand">Social<small className='text-muted'>Feed</small></h2>
+      </nav>
       );
 }
  
