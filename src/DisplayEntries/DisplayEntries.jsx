@@ -1,7 +1,6 @@
 import './DisplayEntries.css'
 import React, { useState } from 'react';
 
-
 const DisplayEntries = (props) => {
     const [like, setLike] = useState(0)
     const [dislike, setDislike] = useState(0)
@@ -52,7 +51,6 @@ const DisplayEntries = (props) => {
                             <button onClick={dislikef}><img src={require("./assets/dislike.png")} alt="dislike button"/>{dislike}</button>
                         </div>
                     </div>
-                    
                 );
                 })}
             </div>
