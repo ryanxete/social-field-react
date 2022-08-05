@@ -18,15 +18,13 @@ const AddEntryForm = (props) => {
     return (
         <div className='entry-box'>
             <form onSubmit={handleSubmit} className='form-grid'>
-                <div>
                     <label className='name'>
                     <h5>  Name:</h5><textarea rows={1} type="text" name="Name" value={name} onChange={(event) => setName(event.target.value)}/>
                     </label><br />
                     <label className='post'>
                             <h5>  Post:</h5><textarea rows={3} type="text" name="Post" value={post} onChange={(event) => setPost(event.target.value)}/>
                     </label><br />
-                    <input type="submit" value="Add" className='button' />
-                </div>
+                    <input type="submit" value="Create" className='button' />
             </form>
         </div>
 
